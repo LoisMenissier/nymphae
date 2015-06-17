@@ -1,6 +1,7 @@
 Template.home.events({
 	'click #valid': function (e, template){
-		 Meteor.loginWithPassword(" ", $('#pwd').val(), function (err) {
+		 Meteor.loginWithPassword(" ", $('#pwd').val(), function (err, response) {
+            console.log(response);
                 if (err) {
                     console.log(err);
                     template.$("#pwd").addClass('error');

@@ -1,12 +1,12 @@
 Meteor.methods({
 	//Add user
-	 addUser: function (name, pwd, email) {
+	 addUser: function (email, pwd, macAdress, username) {
         Accounts.createUser({
-             'name': name,
-            'email': email,
-            username: " ",
-            password: pwd,
+            password : pwd,
+            'username': username,
+            'emails': email,
              profile: {
+                macAdress : macAdress,
 	            role: 'member'
 	        }
         });
@@ -14,8 +14,8 @@ Meteor.methods({
     
     //Remove user
     removeUser: function (email) {
-        return Users.remove({
-            'email': email
+        return Meteor.users.remove({
+            'emails': email
         });
     },
 
