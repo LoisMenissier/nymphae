@@ -1,17 +1,12 @@
  Meteor.startup(function () {
-    Users.insert({
-    	name: "TestNymphae",
-    	pwd: "admin",
-    	email: "test@test.com",
-
-    });
-
-    Devices.insert({
-    	id: "ER6R3",
-    	idModule:[{
-    		id:001
-    	},{
-    		id:002
-    	}]
-    });
-  });
+     if (Meteor.users.find().count() === 0) {
+         Accounts.createUser({
+             username: 'admin',
+             email: 'admin@admin.fr',
+             password: 'admin',
+             profile: {
+                 role: 'admin'
+             }
+         });
+     }
+ });

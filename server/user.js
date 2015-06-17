@@ -1,15 +1,14 @@
 Meteor.methods({
 	//Add user
 	 addUser: function (name, pwd, email) {
-        Users.insert({
-            'name': name,
-            'pwd': pwd,
-            'email': email
-        });
-
         Accounts.createUser({
+             'name': name,
+            'email': email,
             username: " ",
-            password: pwd
+            password: pwd,
+             profile: {
+	            role: 'member'
+	        }
         });
     },
     
@@ -23,5 +22,15 @@ Meteor.methods({
     //Modify user
     modifyUser: function(email, name, pwd){
 
+    },
+    
+    //Find user by id
+    findOneUserById: function (id){
+        return Meteor.users.find({_id: id}).fetch();
+    },
+    
+    //Find user by id and role
+    findOneUserByIdAndRole: function(id, role){
+        Meteor.users.find
     }
 })
