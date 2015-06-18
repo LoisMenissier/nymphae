@@ -1,10 +1,11 @@
 Meteor.methods({
 	//Add user
 	 addUser: function (name, pwd, email) {
+         var ussername = Meteor.users.find().count() + 1;
         Accounts.createUser({
              'name': name,
             'email': email,
-            username: " ",
+            username: "Nymphi"+ussername,
             password: pwd,
              profile: {
 	            role: 'member'
@@ -31,6 +32,7 @@ Meteor.methods({
     
     //Find user by id and role
     findOneUserByIdAndRole: function(id, role){
-        Meteor.users.find
+        var user = Meteor.users.find({_id: id, role: role});
+        if(user.profile.role == "admin"){ return true }else{ return false }
     }
 })
