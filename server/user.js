@@ -31,7 +31,6 @@ Meteor.methods({
     
     //Find user by id and role
     findOneUserByIdAndRole: function(id, role){
-        var user = Meteor.users.find({_id: id, role: role});
-        if(user.profile.role == "admin"){ return true }else{ return false }
+        Meteor.users.find
     }
 })
