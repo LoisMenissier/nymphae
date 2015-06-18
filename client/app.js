@@ -1,7 +1,6 @@
 Template.home.events({
-	'click #valid': function (e, template){
-        var username = Meteor.users.find({})
-		 Meteor.loginWithPassword("Nymphi4", $('#pwd').val(), function (err, result) {
+	'click #valid': function (event, template){
+		 Meteor.loginWithPassword($('#email').val(), $('#pwd').val(), function (err, result) {
              console.log(result)
                 if (err) {
                     console.log(err);

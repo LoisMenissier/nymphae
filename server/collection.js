@@ -1,0 +1,1 @@
+MacAdresses = new Mongo.Collection('macAdresses');
