@@ -581,9 +581,9 @@ Hero
 ========================================================================== */
 .hero {
     position: relative;
-    padding: 60px 0 60px 0;
+    padding: 60px 0 60px 100px;
     min-height: 800px;
-    background: rgb(40, 70, 102) url('../img/hero-01.jpg') no-repeat center center;
+    background: rgb(40, 70, 102) url('../img/nymphae-01.jpg') no-repeat center center;
     background-size: cover;
     color: #fff;
 }
@@ -1092,4 +1092,16 @@ Waypoints
 .delay-1s {
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
+}
+
+/* ==========================================================================
+Nav section
+========================================================================== */
+.nav{
+    position: relative;
+    padding: 20px 0 0px 100px;
+    width: 100%;
+    background-color: #05b28a;
+    margin-bottom: 0;
+    padding-bottom: 10px;
 }

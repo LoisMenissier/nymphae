@@ -4,31 +4,37 @@
 </head>
 
 <template name="home">
-	{{> header}}	
+	{{> nav}}
+	{{> header}}
+</template>
+
+<template name="nav">
+	<section class="nav">
+		<div class="container">
+			<div class="row nav-wrapper">
+				<div class="col-md-6 col-sm-6 col-xs-6 text-left">
+					<a href="#"><img src="img/logo-nymphae.png" alt="Nymphae Logo"></a>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
+					<a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
+				</div>
+			</div>
+		</div>
+	</section>
 </template>
 
 <template name="header">
-	<header>
-		<section class="hero">
-			<div class="texture-overlay"></div>
-			<div class="container">
-				<div class="row nav-wrapper">
-					<div class="col-md-6 col-sm-6 col-xs-6 text-left">
-						<a href="#"><img src="img/logo-white.png" alt="Boxify Logo"></a>
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
-						<a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
-					</div>
-				</div>
-				<div class="row hero-content">
-					<div class="col-md-12 text-center">
-						<h1 class="animated fadeInDown">Phrase d'accroche !</h1>
-						<a href="http://tympanus.net/codrops/?p=22554" class="use-btn animated fadeInUp">Use it for free</a>
-					</div>
+	<section class="hero">
+		<div class="texture-overlay"></div>
+		<div class="container">
+			<div class="row hero-content">
+				<div class="col-md-12 text-center">
+					<h1 class="animated fadeInDown">Phrase d'accroche !</h1>
+					<a href="http://tympanus.net/codrops/?p=22554" class="use-btn animated fadeInUp">Commandez-le</a>
 				</div>
 			</div>
-		</section>
-	</header>
+		</div>
+	</section>
 </template>
 
 <template name="layout">
