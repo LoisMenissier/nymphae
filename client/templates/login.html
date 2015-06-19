@@ -1,4 +1,4 @@
-<template name="login">
+<!--<template name="login">
 	<input type="text" id="email">
 	<input type="text" id="pwd">
 	<button class="valid">Connection</button>
@@ -10,4 +10,50 @@
 	<input type="text" id="pwd">
 	<input type="text" id="username">
 	<button class="valid">Première Connection</button>
+</template>-->
+
+
+<template name="login">
+    <span><a class="login-trigger"  data-toggle="modal" data-target="#login">CONNEXION</a></span>
+
+    <!-- Modal -->
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h1>Déjà inscrit ?</h1>
+                </div>
+
+                <div class="modal-body">
+                    <span>Email:</span>
+                    <input type="text" id="email" placeholder="nymphae@gmail.com">
+
+                    <span>Mot de passe:</span>
+                    <input type="password" id="pwd" placeholder="Mot de passe">
+
+                    <button id="connexion">Connexion</button>
+                    <a href="#">Mot de passe perdu ?</a>
+                </div>
+
+                <div class="modal-header">
+                    <h1>Première connexion</h1>
+                </div>
+
+                <div class="modal-body">
+                    <span>Numéro MAC de la box: </span>
+                    <input type="text" id="macAddress" placeholder="Ex : 050504004651">
+
+                    <button id="register">Connexion</button>
+                </div>
+
+                <div class="modal-footer">
+                    <span>Le numéro Mac de la box s'affiche en appuyant sur le bouton situé sur le dessus.</span>
+                    <span>En cas de problème contactez l'assistance à l'adresse</span>
+                     <a href="#">help@nymphae.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>

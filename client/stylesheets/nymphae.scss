@@ -1,0 +1,57 @@
+@import 'variables';
+
+#login {
+    text-align: center;
+    .modal-content {
+        border-radius: 0;
+        width: 428px;
+        font: 400 1.142857143em Aller;
+        h1 {
+            font: 400 2.571428571em Pacifico;
+            color: $font-color-green;
+        }
+        .modal-header {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .modal-body {
+            text-align: left;
+            input, button {
+                height: 38px;
+                width: 100%;
+            }
+            input {
+                display: block;
+                margin: 14px 0 14px;
+            }
+            button {
+                background-color: $font-color-green;
+                border: none;
+                color: white;
+                font: 400 1.714285714em Pacifico;
+            }
+            a {
+                text-align: center;
+                display: block;
+                color: $font-color-green;
+                margin-top: 9px; 
+            }
+        }
+        .modal-footer{
+            border: none;
+            span{
+                display: block;
+                text-align: center;
+                margin-bottom: 10px;
+                font: 400 1em Aller;
+            }
+            a {
+                text-align: center;
+                display: block;
+                color: $font-color-green;
+                margin-top: -9px;
+                
+            }
+        }
+    }
+}
