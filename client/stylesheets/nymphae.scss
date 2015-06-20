@@ -16,9 +16,14 @@
         }
         .modal-body {
             text-align: left;
-            input, button {
+            input{
                 height: 38px;
                 width: 100%;
+            }
+            button{
+                height: 38px;
+                width: 100%;
+                padding-bottom: 50px;
             }
             input {
                 display: block;
@@ -705,6 +710,11 @@ Modification button
 }
 .popup-modification{
     .modal-content{
-        font: inherit;  
-    }   
+        /*font: inherit;*/
+    }
+    .modal-footer{
+        span{
+            margin-bottom: 10px;
+        }
+    }
 }
