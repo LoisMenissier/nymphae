@@ -11,6 +11,7 @@ accounts-base
 accounts-password
 manuelschoebel:wait-on-lib
 http
-xcv58:collection-api
 nemo64:bootstrap
 less
+nimble:restivus
+aldeed:collection2
