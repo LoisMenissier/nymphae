@@ -3,10 +3,38 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 </head>
 
-
 <template name="home">
-	<input type="text" id="pwd">
-	<button id="valid">OK</button>
+	{{> nav}}
+	{{> header}}
+</template>
+
+<template name="nav">
+	<section class="nav">
+		<div class="container">
+			<div class="row nav-wrapper">
+				<div class="col-md-6 col-sm-6 col-xs-6 text-left">
+					<a href="http://localhost:3000"><img src="img/logo-nymphae.png" alt="Nymphae Logo"></a>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
+					<a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+</template>
+
+<template name="header">
+	<section class="hero">
+		<div class="texture-overlay"></div>
+		<div class="container">
+			<div class="row hero-content">
+				<div class="col-md-12 text-center">
+					<h1 class="animated fadeInDown">Phrase d'accroche !</h1>
+					<a href="http://www.google.fr" class="use-btn animated fadeInUp">Commandez-le</a>
+				</div>
+			</div>
+		</div>
+	</section>
 </template>
 
 <template name="layout">
