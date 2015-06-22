@@ -1,0 +1,80 @@
+<template name="login">
+    <span><a class="login-trigger"  data-toggle="modal" data-target=".popup">CONNEXION</a></span>
+
+    <!-- Modal -->
+    <div class="modal fade popup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h1>Déjà inscrit ?</h1>
+                </div>
+
+                <div class="modal-body">
+                    <span>Email:</span>
+                    <input type="text" id="email" placeholder="nymphae@gmail.com">
+
+                    <span>Mot de passe:</span>
+                    <input type="password" id="pwd" placeholder="Mot de passe">
+
+                    <button id="connexion">Connexion</button>
+                    <a href="#">Mot de passe perdu ?</a>
+                </div>
+
+                <div class="modal-header">
+                    <h1>Première connexion</h1>
+                </div>
+
+                <div class="modal-body">
+                    <span>Numéro MAC de la box: </span>
+                    <input type="text" id="macAddress" placeholder="Ex : 050504004651">
+
+                    <button id="register">Connexion</button>
+                </div>
+
+                <div class="modal-footer">
+                    <span>Le numéro Mac de la box s'affiche en appuyant sur le bouton situé sur le dessus.</span>
+                    <span>En cas de problème contactez l'assistance à l'adresse</span>
+                     <a href="#">help@nymphae.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="updatePlant">
+    <span><button class="login-trigger modification"  data-toggle="modal" data-target=".popup">Modifier plante</button></span>
+
+    <!-- Modal -->
+    <div class="modal fade popup popup-modification" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h1>Modification</h1>
+                </div>
+
+                <div class="modal-body">
+                    <span>Sélectionner une plante</span>
+                    <div class="bfh-selectbox" data-name="selectbox3" data-value="12" data-filter="true">
+                    <select class="form-control">
+                        <option>Sélectionne une plante...</option>
+                        <option>Fleur de lys</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select> 
+                    </div>
+
+                    <span>Description</span>
+                    <textarea class="form-control" rows="10" cols="5" placeholder="Dans la chambre des enfants."></textarea>
+
+                    <button id="connexion">Enregistrer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
