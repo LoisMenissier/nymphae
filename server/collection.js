@@ -1,1 +1,1 @@
-MacAddresses = new Mongo.Collection('macAddresses');
+var MacAddresses = new Mongo.Collection('macAddresses');
