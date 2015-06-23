@@ -14,11 +14,11 @@ Meteor.methods({
     //Update macAddress
     updateMacAddress: function (oldMacAddress, newMacAddress) {
     	macAddresses.update({
-    		macAdress:oldMacAddress
+    		macAddress:oldMacAddress
     	},
     	{
     		$set:{
-    			macAdress:newMacAddress
+    			macAddress:newMacAddress
     		}
     	})
     }

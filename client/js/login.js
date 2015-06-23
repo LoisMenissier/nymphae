@@ -48,7 +48,7 @@ Template.login.events({
             'username': $('#username').val(),
             'email': $('#mail').val(),
             profile: {
-                macAdress: $('#macAddress').val(),
+                macAddress: $('#macAddress').val(),
                 role: 'member'
             }
         });

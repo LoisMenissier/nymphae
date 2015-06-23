@@ -1,12 +1,12 @@
 Meteor.methods({
     //Add user
-    addUser: function (email, pwd, macAdress, username) {
+    addUser: function (email, pwd, macAddress, username) {
         Accounts.createUser({
             password: pwd,
             'username': username,
             'email': email,
             profile: {
-                macAdress: macAdress,
+                macAddress: macAddress,
                 role: 'member'
             }
         });

@@ -6,9 +6,9 @@ Stats = new Mongo.Collection('stats');
 var Schemas = {};
 
 Schemas.Devices = new SimpleSchema({
-    macAdress: {
+    macAddress: {
         type: String,
-        label: "Mac Adress",
+        label: "Mac Address",
         max: 6
     },
     firstTime: {

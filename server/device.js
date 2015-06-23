@@ -1,12 +1,12 @@
 Meteor.methods({
 	//Check first_time
 	getAllDevices: function () {
-        var macAdress = Meteor.http.call("GET", "http://localhost:3000/api/devices");
-        return macAdress;
+        var macAddress = Meteor.http.call("GET", "http://localhost:3000/api/devices");
+        return macAddress;
     },
 
-    getDevice: function (macAdress) {
-        var result = Devices.find({macAdress: {$in: [macAdress]}}).fetch();
+    getDevice: function (macAddress) {
+        var result = Devices.find({macAddress: {$in: [macAddress]}}).fetch();
         if (result.length >= 1){
         	return result;
         } else {
@@ -15,10 +15,10 @@ Meteor.methods({
         console.log(result);
     },
 
-    updateDevice: function (macAdress) {
+    updateDevice: function (macAddress) {
     	Devices.update(
             { 
-                macAdress : macAdress 
+                macAddress : macAddress 
             },
             {
                 $set: {
