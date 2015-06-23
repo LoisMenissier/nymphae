@@ -44,6 +44,7 @@ Template.login.events({
     'click #register': function (event, template){
         Accounts.createUser({
             password: $('#password').val(),
+            name: $('#name').val(),
             'username': $('#username').val(),
             'email': $('#mail').val(),
             profile: {

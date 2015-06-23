@@ -14,8 +14,8 @@ Meteor.methods({
 
     //Remove user
     removeUser: function (email) {
-        return Meteor.users.remove({
-            'emails': email
+        Meteor.users.remove({
+            'emails.address': email
         });
     },
 
@@ -32,6 +32,7 @@ Meteor.methods({
     },
 
     getAllUsers: function (){
-        return Meteor.users.find().fetch();
+        var user = Meteor.users.find({}).fetch();
+        return user;
     }
 })

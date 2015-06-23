@@ -1,3 +1,28 @@
 <template name="admin">
 	<h1>PROFIL ADMIN</h1>
+	<table>	
+		<thead>
+			<tr>
+			<th>Prénom</th>
+			<th>Nom</th>
+			<th>Email</th>
+			<th>Rôle</th>
+			<th>Adresse MAC</th>
+			<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#each users}}
+			<tr>
+				<td><strong>{{username}}</strong></td>
+				<td>{{name}}</td>
+				<td>{{emails.[0].address}}</td>
+				<td>{{profile.role}}</td>
+				<td>{{profile.macAdress}}</td>
+				<td><button id="update">Modifier</button>	
+				<button id="delete">Supprimer</button></td>
+			</tr>
+			{{/each}}
+		</tbody>
+	</table>
 </template>
