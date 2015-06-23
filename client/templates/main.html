@@ -3,40 +3,103 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 </head>
 
+<template name="layout">
+    {{> yield}}
+</template>
+
 <template name="home">
-	{{> nav}}
-	{{> header}}
+    {{> nav}} {{> header}} {{> works}} {{> appMobile}} {{> contact}}
 </template>
 
 <template name="nav">
-	<section class="nav">
-		<div class="container">
-			<div class="row nav-wrapper">
-				<div class="col-md-6 col-sm-6 col-xs-6 text-left">
-					<a href="http://localhost:3000"><img src="img/logo-nymphae.png" alt="Nymphae Logo"></a>
-				</div>
-				<div class="col-md-6 col-sm-6 col-xs-6 text-right navicon">
-					<a id="trigger-overlay" class="nav_slide_button nav-toggle" href="#"><span></span></a>
-				</div>
-			</div>
-		</div>
-	</section>
+
+    <section class="nav">
+        <div class="container">
+            <div class="row nav-wrapper">
+                <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+                    <a href="#"><img src="img/logo-nymphae.png" alt="Nymphae Logo">
+                    </a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-right">
+                    <a href="#">CONNEXION</a>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
 <template name="header">
-	<section class="hero">
-		<div class="texture-overlay"></div>
-		<div class="container">
-			<div class="row hero-content">
-				<div class="col-md-12 text-center">
-					<h1 class="animated fadeInDown">Phrase d'accroche !</h1>
-					<a href="http://www.google.fr" class="use-btn animated fadeInUp">Commandez-le</a>
-				</div>
-			</div>
-		</div>
-	</section>
+    <section class="hero">
+        <div class="texture-overlay"></div>
+        <div class="container">
+            <div class="row hero-content">
+                <div class="col-md-12 text-center">
+                    <h1 class="animated fadeInDown">Phrase d'accroche !</h1>
+                    <button class="use-btn animated fadeInUp">Commandez-le</button>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
-<template name="layout">
-    {{> yield}}
+<template name="works">
+    <section class="work">
+        <div class="container">
+            <div class="row col-md-12">
+                <h1>Kezako ?</h1>
+                <p>Minions ipsum me want bananaaa! Potatoooo aaaaaah hahaha tank yuuu! Underweaaar. Gelatooo jiji aaaaaah butt ti aamoo!</p>
+            </div>
+            <div class="steps row">
+                <div class="step col-md-4">
+                    <span>Récoltes les données</span>
+                    <img src="/img/computer38.svg" alt="">
+                </div>
+                <div class="step col-md-4">
+                    <span>Traite les données</span>
+                    <img src="/img/chart36.svg" alt="">
+                </div>
+                <div class="step col-md-4">
+                    <span>Vous avertie</span>
+                    <img src="/img/desktop8.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+
+<template name="appMobile">
+    <section class="app">
+        <div class="container">
+            <div class="row">
+                <div class="descrip col-md-6">
+                    <h1>  Télécharge notre application pour Android et Iphone</h1>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores iusto dolor id, cumque, dolorem neque dignissimos facilis, sit quo unde aliquam repellendus doloremque placeat vel consequatur aut nemo, sequi possimus! 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae iure quia quis iste delectus accusantium, itaque minus soluta minima officia. Fugit nulla modi, distinctio nesciunt incidunt iusto perferendis consequatur cum!</p>
+
+                    <button>Android app</button>
+                    <button>Iphone app</button>
+                </div>
+                <div class="col-md-6">
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+</template>
+
+
+<template name="contact">
+    <section class="contact">
+        <dic class="container">
+            <div class="row">
+                <div class="col-md-12 text-center"><h1>Vous en voulez?</h1>
+                <input type="text" placeholder="nymphae@gmail.com">
+                <button>Envoyer</button>
+                </div>
+            </div>
+        </dic>
+    </section>
 </template>
