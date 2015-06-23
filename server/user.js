@@ -4,7 +4,7 @@ Meteor.methods({
         Accounts.createUser({
             password: pwd,
             'username': username,
-            'emails': email,
+            'email': email,
             profile: {
                 macAdress: macAdress,
                 role: 'member'
@@ -14,8 +14,8 @@ Meteor.methods({
 
     //Remove user
     removeUser: function (email) {
-        return Meteor.users.remove({
-            'emails': email
+        Meteor.users.remove({
+            'emails.address': email
         });
     },
 
@@ -31,15 +31,8 @@ Meteor.methods({
         }).fetch();
     },
 
-    //Find user by id and role
-    findOneUserByIdAndRole: function (id) {
-        var user = Meteor.users.find({
-            _id: id
-        });
-        if (user[0].profile.role == "admin") {
-            return Meteor.users.find();
-        } else {
-            return user
-        }
+    getAllUsers: function (){
+        var user = Meteor.users.find({}).fetch();
+        return user;
     }
 })

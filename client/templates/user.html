@@ -1,6 +1,6 @@
-<template name="profile">
-    <h1>PROFIL UTILISATEUR
-	PROFIL UTILISATEUR PROFIL UTILSATEUR</h1>
+<template name="profil">
+    {{> navProfil}}
+    {{> profilUser}}
 </template>
 
 
@@ -143,4 +143,40 @@
             </div>
         </div>
     </section>
+</template>
+
+<template name="navProfil">
+    <section class="nav">
+        <div class="container">
+            <div class="row nav-wrapper">
+                <div class="col-md-6 col-sm-6 col-xs-6 text-left">
+                    <a href="http://localhost:3000"><img src="img/logo-nymphae.png" alt="Nymphae Logo"></a>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon itemsNav">
+                    <ul class="nav navbar-nav navbar-center">
+                        <li><a href="#">PLANTES</a></li>
+                        <li><a href="#">PROFIL</a></li>
+                        <li><a href="#">HISTORIQUE</a></li>
+                        <li><a id="logout">DECONNEXION</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<template name="profilUser">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="center-block placeholder">Bloc 1</div>
+            </div>
+            <div class="col-md-6 brd">
+                <div class="center-block placeholder">Bloc 2</div>
+            </div>
+            <div class="col-md-12 brd">
+                <div class="center-block placeholder">Bloc 3</div>
+            </div>
+        </div>
+    </div>
 </template>
