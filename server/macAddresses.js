@@ -1,8 +1,8 @@
 Meteor.methods({
 	//Check first_time
-	 checkFirstTime: function (macAdress) {
-        var mac= macAdresses.find({
-        	numMac:macAdress
+	 checkFirstTime: function (macAddress) {
+        var mac= macAddresses.find({
+        	numMac:macAddress
         }).fetch();
         if (mac.firstTime==true){
         	return true;
@@ -11,10 +11,10 @@ Meteor.methods({
         }
     },
 
-    //Update macAdress
-    updateMacAdress: function (macAdress) {
-    	macAdresses.update({
-    		numMac:macAdress
+    //Update macAddress
+    updateMacAddress: function (macAddress) {
+    	macAddresses.update({
+    		numMac:macAddress
     	},
     	{
     		$set:{

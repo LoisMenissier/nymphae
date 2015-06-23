@@ -1,6 +1,4 @@
     $('head').prepend('<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">');
-
-
     Template.home.events({
         'click #valid': function (event, template) {
             Meteor.loginWithPassword($('#email').val(), $('#pwd').val(), function (err, result) {
