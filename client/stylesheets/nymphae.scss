@@ -148,6 +148,12 @@
     .measure {
         font: 700 40px Aller;
     }
+    #logoPlant{
+        width: 90%;
+        height: 61%;
+        -webkit-clip-path: circle(41% at 50% 49%);
+        clip-path: circle(41% at 50% 49%);
+    }
 }
 
 #fichePlante {
@@ -197,6 +203,12 @@
             font: 700 30px Aller;
             color: #05b28a;
         }
+    }
+
+    #logoPlant{
+        width: 100%;
+        -webkit-clip-path: circle(36% at 50% 48%);
+        clip-path: circle(36% at 50% 48%);
     }
 }
 
@@ -266,4 +278,13 @@ Profil centered container
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.infosUser{
+    .center-block{
+        span, input{
+            display: block;
+            width: 95%;
+        }
+    }
 }

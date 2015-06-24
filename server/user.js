@@ -1,12 +1,12 @@
 Meteor.methods({
     //Add user
-    addUser: function (email, pwd, macAdress, username) {
+    addUser: function (email, pwd, macAddress, username) {
         Accounts.createUser({
             password: pwd,
             'username': username,
-            'emails': email,
+            'email': email,
             profile: {
-                macAdress: macAdress,
+                macAddress: macAddress,
                 role: 'member'
             }
         });
@@ -14,8 +14,8 @@ Meteor.methods({
 
     //Remove user
     removeUser: function (email) {
-        return Meteor.users.remove({
-            'emails': email
+        Meteor.users.remove({
+            'emails.address': email
         });
     },
 
@@ -31,15 +31,26 @@ Meteor.methods({
         }).fetch();
     },
 
-    //Find user by id and role
-    findOneUserByIdAndRole: function (id) {
-        var user = Meteor.users.find({
-            _id: id
-        });
-        if (user[0].profile.role == "admin") {
-            return Meteor.users.find();
-        } else {
-            return user
-        }
+    getAllUsers: function (){
+        var user = Meteor.users.find({}).fetch();
+        return user;
+    },
+
+    getAllModules: function(id){
+        var modules = Meteor.users.find({_id: id}).fetch();
+        //console.log(modules[0].profile.modules);
+        return modules[0].profile.modules;
+    },
+
+    getPlantPerModule: function (idModule){
+        var module = Modules.find({_id: idModule}, {fields: {'idPlant':1, '_id': 0}}).fetch();
+        //console.log(module[0].idPlant);
+        return module[0].idPlant;
+    },
+
+    getInfosPerPlant: function (idPlant){
+        var plante = Plants.find({_id: idPlant}).fetch();
+        console.log(plante);
+        return plante;
     }
 })
