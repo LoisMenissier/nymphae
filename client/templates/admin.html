@@ -13,16 +13,23 @@
 		</thead>
 		<tbody>
 			{{#each users}}
-			<tr>
-				<td><strong>{{username}}</strong></td>
-				<td>{{name}}</td>
-				<td>{{emails.[0].address}}</td>
-				<td>{{profile.role}}</td>
-				<td>{{profile.macAddress}}</td>
-				<td><button id="update">Modifier</button>	
-				<button id="delete">Supprimer</button></td>
-			</tr>
+				{{>data}}
 			{{/each}}
 		</tbody>
 	</table>
+</template>
+
+<template name="data">
+	<tr>
+		<td><strong>{{username}}</strong></td>
+		<td>{{name}}</td>
+		<td>{{emails.[0].address}}</td>
+		<td>{{profile.role}}</td>
+		<td>{{profile.macAddress}}</td>
+		<td>{{>updateMacAddressAdmin}}
+		<button class="show-my-modal-button" type="button">
+        Show Modal
+    	</button>
+		<button id="delete">Supprimer</button></td>
+	</tr>
 </template>

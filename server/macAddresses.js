@@ -13,13 +13,29 @@ Meteor.methods({
 
     //Update macAddress
     updateMacAddress: function (oldMacAddress, newMacAddress) {
-    	macAddresses.update({
-    		macAddress:oldMacAddress
+        var oldMac = oldMacAddress;
+        var newMac = newMacAddress;
+        var device = Devices.findOne({"macAddress": oldMac});
+        console.log(device);
+
+        Devices.update({
+    		 "macAddress" : oldMac
     	},
     	{
     		$set:{
-    			macAddress:newMacAddress
+    			"macAddress" : newMac
     		}
-    	})
+    	}
+        );
+
+       Meteor.users.update({
+             "profile.macAddress" : oldMac
+        },
+        {
+            $set:{
+                "profile.macAddress" : newMac
+            }
+        }
+        );
     }
 })
