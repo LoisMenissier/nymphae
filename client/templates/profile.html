@@ -1,6 +1,6 @@
 <template name="profil">
 	{{> navProfile}}
-	{{> profilUser}}
+	{{> yield}}
 </template>
 
 <template name="navProfile">
@@ -12,10 +12,10 @@
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-6 text-right navicon itemsNav">
 					<ul class="nav navbar-nav navbar-center">
-						<li><a href="#">PLANTES</a></li>
-						<li><a href="#">PROFIL</a></li>
+						<li><a id="myPlants">PLANTES</a></li>
+						<li><a id="profil">PROFIL</a></li>
 						<li><a href="#">HISTORIQUE</a></li>
-						<li><a href="#">DECONNEXION</a></li>
+						<li><a id="logoutUser">DECONNEXION</a></li>
 					</ul>
 				</div>
 			</div>
@@ -24,18 +24,50 @@
 </template>
 
 <template name="profilUser">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="center-block placeholder">Bloc 1</div>
+	<section class="infosUser">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="center-block text-center">
+						<h1>Profil Utilisateur</h1>
+						<div class="text-left">
+							<span>Adresse mail:</span>
+		                    <input type="text" id="email" placeholder="Adresse User">
+		                    <span>Adresse Mac de votre boîte:</span>
+		                    <input type="text" id="email" placeholder="Adresse User">
+		                    <button id="enregistrer">Enregistrer</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="center-block text-center">
+						<h1>Mot de passe</h1>
+						<div class="text-left">
+							<span>Ancien mot de passe:</span>
+		                    <input type="password" id="oldpassword" placeholder="Votre ancien mot de passe">
+		                    <span>Nouveau mot de passe:</span>
+		                    <input type="password" id="newpassword" placeholder="Votre nouveau mot de passe">
+		                    <span>Vérification:</span>
+		                    <input type="password" id="verif" placeholder="Votre nouveau mot de passe">
+		                    <button id="enregistrer">Enregistrer</button>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-6 brd">
-				<div class="center-block placeholder">Bloc 2</div>
+			<div class="row">
+				<div class="col-md-12">
+						<div class="center-block text-center">
+							<h1>Assistance</h1>
+							<div class="text-left">
+								<span>Sujet:</span>
+			                    <input type="text" id="oldpassword" placeholder="Le sujet de votre demande d'assistance">
+			                    <span>Message:</span>
+			                    <textarea class="form-control" rows="10" cols="5" placeholder="Votre message"></textarea>
+			                    <button id="enregistrer">Enregistrer</button>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="col-md-12 brd">
-				<div class="center-block placeholder">Bloc 3</div>
-			</div>
-		</div>
-	</div>
+	</section>
 </template>
-

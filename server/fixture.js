@@ -14,7 +14,8 @@
              email: 'user@user.fr',
              password: 'user',
              profile: {
-                 role: 'user'
+                 role: 'user',
+                 modules:[{idModule: 'nrJiDutWeL5fQGQro'}, {idModule: 'JBzmKQ5d24hyBfAGZ'}]
              }
          });
      }

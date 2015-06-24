@@ -1,9 +1,3 @@
-<template name="profil">
-    {{> navProfil}}
-    {{> profilUser}}
-</template>
-
-
 <template name="fichePlante">
     <section id="fichePlante" class="container">
 
@@ -78,9 +72,10 @@
 <template name="allPlants">
     <section id="allPlants" class="container">
         <div class="row">
+        {{#each plants}}
             <div class="plant col-md-4">
                 <img src="/img/plantes.png" alt="">
-                <h2>Fleur de lys</h2>
+                <h2>{{[0].name}}</h2>
 
                 <div class="picto row">
                     <div class="col-md-4"><img src="/img/humidite.png" alt="">
@@ -99,84 +94,8 @@
                     </div>
                 </div>
             </div>
-            <div class="plant col-md-4">
-                <img src="/img/plantes.png" alt="">
-                <h2>Fleur de lys</h2>
-
-                <div class="picto row">
-                    <div class="col-md-4"><img src="/img/humidite.png" alt="">
-                    </div>
-                    <div class="col-md-4"><img src="/img/sun.png" alt="">
-                    </div>
-                    <div class="col-md-4"><img src="/img/termo.png" alt="">
-                    </div>
-                </div>
-                <div class="measure row">
-                    <div class="col-md-4"><span>50%</span>
-                    </div>
-                    <div class="col-md-4"><span>50%</span>
-                    </div>
-                    <div class="col-md-4"><span>20°C</span>
-                    </div>
-                </div>
-            </div>
-            <div class="plant col-md-4">
-                <img src="/img/plantes.png" alt="">
-                <h2>Fleur de lys</h2>
-
-                <div class="picto row">
-                    <div class="col-md-4"><img src="/img/humidite.png" alt="">
-                    </div>
-                    <div class="col-md-4"><img src="/img/sun.png" alt="">
-                    </div>
-                    <div class="col-md-4"><img src="/img/termo.png" alt="">
-                    </div>
-                </div>
-                <div class="measure row">
-                    <div class="col-md-4"><span>50%</span>
-                    </div>
-                    <div class="col-md-4"><span>50%</span>
-                    </div>
-                    <div class="col-md-4"><span>20°C</span>
-                    </div>
-                </div>
-            </div>
+            {{/each}}
+           
         </div>
     </section>
-</template>
-
-<template name="navProfil">
-    <section class="nav">
-        <div class="container">
-            <div class="row nav-wrapper">
-                <div class="col-md-6 col-sm-6 col-xs-6 text-left">
-                    <a href="http://localhost:3000"><img src="img/logo-nymphae.png" alt="Nymphae Logo"></a>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-6 text-right navicon itemsNav">
-                    <ul class="nav navbar-nav navbar-center">
-                        <li><a href="#">PLANTES</a></li>
-                        <li><a href="#">PROFIL</a></li>
-                        <li><a href="#">HISTORIQUE</a></li>
-                        <li><a id="logout">DECONNEXION</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-</template>
-
-<template name="profilUser">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="center-block placeholder">Bloc 1</div>
-            </div>
-            <div class="col-md-6 brd">
-                <div class="center-block placeholder">Bloc 2</div>
-            </div>
-            <div class="col-md-12 brd">
-                <div class="center-block placeholder">Bloc 3</div>
-            </div>
-        </div>
-    </div>
 </template>
