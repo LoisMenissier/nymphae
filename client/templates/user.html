@@ -8,9 +8,9 @@
                     <li>Statistique</li>
                 </ul>
             </nav>
-
+            {{#each infoPlant}}
             <article class="right col-md-3">
-                <img src="/img/plantes.png" alt="">
+                <img id="logoPlant" src="{{images}}" alt="">
                 <h3>Données actuelles</h3>
                 <div class="picto row">
                     <div class="col-md-4"><img src="/img/humidite.png" alt="">
@@ -50,19 +50,23 @@
 
             <article class="left col-md-9">
                 <button id="update">Modifier plante</button>
-                <h2>Fleur de lys <span>/ Nom latin</span></h2>
+                
+
+                <h2>{{name}}<span>/ Nom latin</span></h2>
 
                 <h3 class="where">Plante à l'étage des enfants</h3>
 
                 <div class="description">
-                    <p><span class="bold">Plantation :</span> Il pousse mieux en plein soleil, o￿ffc3￿ffb9 il produit d'avantage de fleurs, mais tol￿ffc3￿ffa8re aussi la mi-ombre. Plantez-les ￿ffc3￿ffa0 60-90cm les uns des autres pour former une haie naturelle ou taill￿ffc3￿ffa9e. Le climat id￿ffc3￿ffa9al varie selon les esp￿ffc3￿ffa8ces.</p>
-                    <p><span class="bold"> Croissance :</span> Les ab￿ffc3￿ffa9lias se plaisent en plein soleil et leur feuillage peut ￿ffc3￿ffaatre persistant ou caduc. Leur taille diff￿ffc3￿ffa8re selon les esp￿ffc3￿ffa8ces. La hauteur et la largeur varient, mais ils sont g￿ffc3￿ffa9n￿ffc3￿ffa9ralement plus larges que hauts. Les vari￿ffc3￿ffa9t￿ffc3￿ffa9s les plus petites ("panache" ou "Silver Anniversary" et "prostrata", (les deux appartenant ￿ffc3￿ffa0 la sous-esp￿ffc3￿ffa8ce "grandiflora") atteignent une hauteur moyenne de 45 ￿ffc3￿ffa0 60cm, alors que les plus grands (de l'esp￿ffc3￿ffa8ce "floribunda") peuvent atteindre une hauteur de 3 ￿ffc3￿ffa0 3,60 m.</p>
-                    <p><span class="bold">Floraison :</span> Cette plante est belle toute l'ann￿ffc3￿ffa9e: la floraison est prolifique pendant tout l'￿ffc3￿ffa9t￿ffc3￿ffa9 et le d￿ffc3￿ffa9but de l'automne, avec d'autres floraisons sporadiques pendant le restant de l'ann￿ffc3￿ffa9e. Les fleurs elles-m￿ffc3￿ffaames sont petites, mais leur abondance fait toujours effet. Tubulaires ou en forme de clochettes, elles sont g￿ffc3￿ffa9n￿ffc3￿ffa9ralement roses ou blanches, m￿ffc3￿ffaame si certaines esp￿ffc3￿ffa8ces peuvent ￿ffc3￿ffaatre couleur lavande (a. sherwoodii) ou rouge violac￿ffc3￿ffa9(ab￿ffc3￿ffa9lia du Mexique). ￿ffc3￿ff94tez r￿ffc3￿ffa9guli￿ffc3￿ffa8rement les fleurs fan￿ffc3￿ffa9es pour prolonger la floraison.</p>
-                    <p><span class="bold"> Sol et irrigation :</span> Les ab￿ffc3￿ffa9lias s'￿ffc3￿ffa9panouissent avec un apport d'eau r￿ffc3￿ffa9gulier. Ils pr￿ffc3￿ffa9f￿ffc3￿ffa8rent les sols humides, l￿ffc3￿ffa9g￿ffc3￿ffa8rement alcalins, riches en mati￿ffc3￿ffa8res organiques et bien drain￿ffc3￿ffa9s, m￿ffc3￿ffaame s'ils peuvent s'adapter ￿ffc3￿ffa0 un sol moyen. Une fois bien implant￿ffc3￿ffa9s, les ab￿ffc3￿ffa9lias peuvent tol￿ffc3￿ffa9rer une s￿ffc3￿ffa9cheresse mod￿ffc3￿ffa9r￿ffc3￿ffa9e; mais ils supportent mal une forte concentration de sel dans le sol.</p>
-                    <p><span class="bold"> Elagage :</span> Pour am￿ffc3￿ffa9liorer la croissance, une taille r￿ffc3￿ffa9guli￿ffc3￿ffa8re et un bon ensoleillement (plein soleil ou mi-ombre) sont essentiels. La taille doit ￿ffc3￿ffa9liminer le bois mort et s'effectue tout de suite apr￿ffc3￿ffa8s la floraison. Taillez les branches de mani￿ffc3￿ffa8re s￿ffc3￿ffa9lective, n'utilisez pas de scie ￿ffc3￿ffa9lectrique. En coupant les tiges au ras du sol en hiver ou au d￿ffc3￿ffa9but du printemps, on obtient une plante plus ouverte, aux branches arqu￿ffc3￿ffa9es. Retirez le bois mort ou endommag￿ffc3￿ffa9 au mois d'avril. En retirant les fleurs mortes r￿ffc3￿ffa9guli￿ffc3￿ffa8rement, vous pourrez prolonger la floraison. En automne, une fois la floraison termin￿ffc3￿ffa9e, coupez l￿ffc3￿ffa9g￿ffc3￿ffa8rement les tiges des fleurs pour conserver une forme propre et soign￿ffc3￿ffa9e.</p>
-                    <p><span class="bold"> Eléments nuisibles :</span> Aucun probl￿ffc3￿ffa8me grave de maladies ou d'insectes.</p>
+                    <p><span class="bold">Plantation :</span> {{planting}}</p>
+                    <p><span class="bold"> Croissance :</span> {{growth}}</p>
+                    <p><span class="bold">Floraison :</span> {{blooming}}</p>
+                    <p><span class="bold"> Sol et irrigation :</span> {{soilIrr}}</p>
+                    <p><span class="bold"> Elagage :</span> {{pruning}}</p>
+                    <p><span class="bold"> Eléments nuisibles :</span> {{pests}}</p>
                 </div>
+                
             </article>
+            {{/each}}
         </div>
     </section>
 
@@ -73,29 +77,33 @@
     <section id="allPlants" class="container">
         <div class="row">
         {{#each plants}}
-            <div class="plant col-md-4">
-                <img src="/img/plantes.png" alt="">
-                <h2>{{[0].name}}</h2>
-
-                <div class="picto row">
-                    <div class="col-md-4"><img src="/img/humidite.png" alt="">
-                    </div>
-                    <div class="col-md-4"><img src="/img/sun.png" alt="">
-                    </div>
-                    <div class="col-md-4"><img src="/img/termo.png" alt="">
-                    </div>
-                </div>
-                <div class="measure row">
-                    <div class="col-md-4"><span>50%</span>
-                    </div>
-                    <div class="col-md-4"><span>50%</span>
-                    </div>
-                    <div class="col-md-4"><span>20°C</span>
-                    </div>
-                </div>
-            </div>
-            {{/each}}
+            {{> plant}}
+        {{/each}}
            
         </div>
     </section>
+</template>
+
+<template name="plant">
+    <div class="plant col-md-4">
+        <img id="logoPlant" src="{{[0].images}}" alt="">
+        <h2>{{[0].name}}</h2>
+
+        <div class="picto row">
+            <div class="col-md-4"><img src="/img/humidite.png" alt="">
+            </div>
+            <div class="col-md-4"><img src="/img/sun.png" alt="">
+            </div>
+            <div class="col-md-4"><img src="/img/termo.png" alt="">
+            </div>
+        </div>
+        <div class="measure row">
+            <div class="col-md-4"><span>50%</span>
+            </div>
+            <div class="col-md-4"><span>50%</span>
+            </div>
+            <div class="col-md-4"><span>20°C</span>
+            </div>
+        </div>
+    </div>
 </template>

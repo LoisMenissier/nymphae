@@ -15,7 +15,32 @@ Template.profil.events({
 Template.allPlants.helpers({
 	plants: function(){
 		callBacks();
+		console.log(Session.get('plants'));
 		return Session.get('plants');
+	}
+});
+
+Template.fichePlante.helpers({
+	infoPlant: function(event){
+		var path = Router.current().location.get().path;
+		path = path.split("/");
+		path = path.pop();
+		Meteor.call('getInfosPerPlant', path, function(err, res){
+			if (err){
+				console.log(err);
+			} else {
+				console.log(path);
+				Session.set('info', res);
+			}
+		});
+console.log(Session.get('info'));
+		return Session.get('info');
+	}
+});
+
+Template.plant.events({
+	'click .plant': function(event, template){
+		Router.go('/profil/'+Meteor.userId()+'/mesPlantes/' + template.data[0]._id);
 	}
 });
 
