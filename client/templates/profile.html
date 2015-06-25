@@ -32,10 +32,10 @@
 						<h1>Profil Utilisateur</h1>
 						<div class="text-left">
 							<span>Adresse mail:</span>
-		                    <input type="text" id="email" placeholder="Adresse User">
+		                    <input type="text" id="email" value="{{emails.[0].address}}">
 		                    <span>Adresse Mac de votre boîte:</span>
-		                    <input type="text" id="email" placeholder="Adresse User">
-		                    <button id="enregistrer">Enregistrer</button>
+		                    <input type="text" id="macAddress" value="{{profile.macAddress}}">
+		                    <button id="updateProfil">Enregistrer</button>
 						</div>
 					</div>
 				</div>
@@ -48,8 +48,8 @@
 		                    <span>Nouveau mot de passe:</span>
 		                    <input type="password" id="newpassword" placeholder="Votre nouveau mot de passe">
 		                    <span>Vérification:</span>
-		                    <input type="password" id="verif" placeholder="Votre nouveau mot de passe">
-		                    <button id="enregistrer">Enregistrer</button>
+		                    <input type="password" id="verif" placeholder="Retapez votre nouveau mot de passe">
+		                    <button id="updatePassword">Enregistrer</button>
 						</div>
 					</div>
 				</div>
@@ -63,7 +63,7 @@
 			                    <input type="text" id="oldpassword" placeholder="Le sujet de votre demande d'assistance">
 			                    <span>Message:</span>
 			                    <textarea class="form-control" rows="10" cols="5" placeholder="Votre message"></textarea>
-			                    <button id="enregistrer">Enregistrer</button>
+			                    <button id="sendMessage">Envoyer</button>
 							</div>
 						</div>
 					</div>

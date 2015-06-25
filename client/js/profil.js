@@ -1,6 +1,7 @@
 Template.profil.events({
 	'click #logoutUser': function (event, template){
 		Meteor.logout();
+		Session.keys={};
 		Router.go('/');
 	},
 
@@ -76,3 +77,10 @@ function callBacks() {
 	});
 	
 }
+
+
+Template.profilUser.events({
+    "click #updateProfil":function(event, template){
+        Meteor.call('modifyUser', Meteor.userId(), template.$('#email').val(), template.$('#macAddress').val());
+    }
+});

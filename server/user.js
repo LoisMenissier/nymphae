@@ -20,8 +20,8 @@ Meteor.methods({
     },
 
     //Modify user
-    modifyUser: function (email, name, pwd) {
-
+    modifyUser: function (id, email, macAddress) {
+        Meteor.users.update({_id : id}, {$set: {'emails.0.address': email, 'profile.macAddress': macAddress}});
     },
 
     //Find user by id
@@ -52,5 +52,10 @@ Meteor.methods({
         var plante = Plants.find({_id: idPlant}).fetch();
         console.log(plante);
         return plante;
+    },
+
+    getAllPlantsNames: function(){
+        var plants = Plants.find({}, {fields: {'name':1}});
+        console.log(plants);
     }
 })

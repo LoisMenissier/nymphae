@@ -79,8 +79,8 @@
         {{#each plants}}
             {{> plant}}
         {{/each}}
-           
         </div>
+        {{> buttonAddPlant}}
     </section>
 </template>
 
@@ -106,4 +106,8 @@
             </div>
         </div>
     </div>
+</template>
+
+<template name="buttonAddPlant">
+    {{> addPlant}}
 </template>

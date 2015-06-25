@@ -108,3 +108,34 @@
         </div>
     {{/if}}
 </template>
+
+<template name="addPlant">
+    <button class="show-my-modal-button" type="button">Ajouter une plante</button>
+    
+    <!-- Modal -->
+    {{#if showModal}}
+        <!-- this is the backdrop fully shown from the beginning -->
+        <div class="modal-backdrop fade in"></div>
+        <!-- css ".show" class == modal fully shown -->
+        <div class="modal show">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form class="form-horizontal">
+                        <div class="modal-header">
+                            <button type="button" class="close" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Modifier Adresse MAC</h4>
+                        </div>
+                        <div class="modal-body">
+                            <span>Nouvelle adresse MAC :</span>
+                            <input type="text" id="updatingMAC" placeholder="Nouvelle adresse MAC">
+                        </div>
+                        <div class="modal-footer">
+                             <button type="button" class="cancel btn btn-default">Retour</button>
+                             <button type="submit" class="btn btn-primary">Enregistrer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {{/if}}
+</template>

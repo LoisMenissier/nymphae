@@ -26,5 +26,18 @@ Meteor.methods({
                 }
             }
         )
+    },
+
+    changeMacAddressDevice: function (macAddress) {
+        Devices.update(
+            { 
+                macAddress : macAddress 
+            },
+            {
+                $set: {
+                    firstTime : false
+                }
+            }
+        )
     }
 })
