@@ -16,9 +16,15 @@ Template.profil.events({
 Template.allPlants.helpers({
 	plants: function(){
 		callBacks();
-		console.log(Session.get('plants'));
+		
 		return Session.get('plants');
 	}
+/*	noExist: function(){
+		console.log(check());
+
+		console.log(Session.get('noExist'));
+		return Session.get("noExist");
+	}*/
 });
 
 Template.fichePlante.helpers({
@@ -34,7 +40,6 @@ Template.fichePlante.helpers({
 				Session.set('info', res);
 			}
 		});
-console.log(Session.get('info'));
 		return Session.get('info');
 	}
 });
@@ -44,6 +49,26 @@ Template.plant.events({
 		Router.go('/profil/'+Meteor.userId()+'/mesPlantes/' + template.data[0]._id);
 	}
 });
+
+/*function check(){
+	Session.set("noExist", undefined);
+	Meteor.call('getAllModules', Meteor.userId(), function(err, response){
+			if(err) console.log(err);
+			else{
+				var arrayExist = new Array();
+				for (var i = 0; i < response.length; i++) {
+					if(typeof response[i].idPlant == "undefined"){
+						arrayExist.push(response[0].idModule);
+						if(arrayExist.length == response.length){
+							console.log("test");
+						}
+					}
+				}
+			return arrayExist;
+
+			}
+		});
+}*/
 
 function callBacks() {
 	Meteor.call('getAllModules', Meteor.userId(), function(err, response){
@@ -82,5 +107,31 @@ function callBacks() {
 Template.profilUser.events({
     "click #updateProfil":function(event, template){
         Meteor.call('modifyUser', Meteor.userId(), template.$('#email').val(), template.$('#macAddress').val());
+    }
+});
+
+Template.addPlant.created=function(){
+    Session.set("show-my-modal",false);
+};
+
+Template.addPlant.helpers({
+    showModal:function(){
+        return Session.get("show-my-modal");
+    }
+});
+
+Template.addPlant.events({
+    "click .close, click .cancel":function(){
+        Session.set("show-my-modal",false);
+    },
+
+    "submit form":function(event, template){
+        event.preventDefault();
+        //
+        Session.set("show-my-modal",false);
+    },
+
+    "click .show-my-modal-button":function(event, template){
+        Session.set("show-my-modal",true);
     }
 });

@@ -76,11 +76,15 @@
 <template name="allPlants">
     <section id="allPlants" class="container">
         <div class="row">
+        <div class="col-md-4">        
+            {{#each noExist}}
+                <p>1</p>
+            {{/each}}
+        </div>
         {{#each plants}}
             {{> plant}}
         {{/each}}
         </div>
-        {{> buttonAddPlant}}
     </section>
 </template>
 

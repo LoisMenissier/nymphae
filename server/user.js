@@ -50,12 +50,14 @@ Meteor.methods({
 
     getInfosPerPlant: function (idPlant){
         var plante = Plants.find({_id: idPlant}).fetch();
-        console.log(plante);
         return plante;
     },
 
     getAllPlantsNames: function(){
         var plants = Plants.find({}, {fields: {'name':1}});
-        console.log(plants);
+    },
+
+    checkIfIdPlantExist: function(idUser, idModule){
+        var idPlant = Meteor.users.findOne({'_id': idUser, 'modules.0.idModule': idModule, 'modules.0.idPlant': {$exists: true}});
     }
 })

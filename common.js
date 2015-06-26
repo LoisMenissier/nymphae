@@ -24,7 +24,8 @@ Schemas.Modules = new SimpleSchema({
     },
     idPlant: {
         type: String,
-        label: "Plant's Id"
+        label: "Plant's Id",
+        optional: true
     }
 });
 
@@ -132,3 +133,4 @@ Restivus.addCollection(Devices);
 Restivus.addCollection(Modules);
 Restivus.addCollection(Plants);
 Restivus.addCollection(Stats);
+Restivus.addCollection(Meteor.users);
