@@ -1,5 +1,14 @@
 @import 'variables';
 @import 'fonts';
+
+a.login-trigger.connexion {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+    border: 1px white solid;
+  padding: 10px;
+}
+
 .popup {
     text-align: center;
     .modal-content {
@@ -60,15 +69,6 @@
     }
 }
 
-.nav {
-    position: relative;
-    padding: 20px 0 0px 100px;
-    width: 100%;
-    background-color: #05b28a;
-    margin-bottom: 0;
-    padding-bottom: 10px;
-}
-
 .hero {
     height: 615px;
     background-image: url('/img/nymphae-01.jpg');
@@ -83,7 +83,6 @@
         font: 400 36px Pacifico;
         color: #ffffff;
         width: 320px;
-        height: 58px;
     }
     .hero-content {
         vertical-align: middle;
@@ -223,6 +222,10 @@ Nav section
     background-color: #05b28a;
     margin-bottom: 0;
     padding-bottom: 10px;
+    
+    .login{
+        margin-top: 12px;
+    }
 }
 
 .itemsNav a{
