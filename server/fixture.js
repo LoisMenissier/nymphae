@@ -15,7 +15,7 @@
              password: 'user',
              profile: {
                  role: 'user',
-                 modules:[{idModule: 'nrJiDutWeL5fQGQro', idPlant: ""}, {idModule: 'JBzmKQ5d24hyBfAGZ', idPlant: ""}]
+                 modules:[{idModule: 'nrJiDutWeL5fQGQro', idPlant: "EbX4p68J7XPJEB8eu"}, {idModule: 'JBzmKQ5d24hyBfAGZ', idPlant: "XAEig4h9c2io9EKcm"}]
              }
          });
      }
