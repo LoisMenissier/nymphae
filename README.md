@@ -10,9 +10,9 @@ Lauch
 # Connexion
 
 Admin:
-email: admin@admin.fr
-pwd: admin
+-email: admin@admin.fr
+-pwd: admin
 
 User:
-email: user@user.fr
-pwd: user
+-email: user@user.fr
+-pwd: user
