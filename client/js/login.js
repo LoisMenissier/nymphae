@@ -1,4 +1,11 @@
 Template.login.events({
+    /**
+    * @summary Connect a user
+    * @method 'click #connexion'
+    * @memberOf Template.login.events
+    * @params event
+    * @params template
+    */
 	'click #connexion': function (event, template){
 		 Meteor.loginWithPassword($('#email').val(), $('#pwd').val(), function (err) {
                 if (err) {
@@ -23,6 +30,13 @@ Template.login.events({
             });
 	},
 
+    /**
+    * @summary Display information after entering th mac address
+    * @method 'click #suivant'
+    * @memberOf Template.login.events
+    * @params event
+    * @params template
+    */
     'click #suivant': function (event, template){
         Meteor.call('getDevice', $('#macAddress').val(), function(err, result) {
             if (err){
@@ -40,7 +54,13 @@ Template.login.events({
         });
         $('.modal-backdrop').css('opacity', 0);
     },
-
+    /**
+    * @summary Register a user
+    * @method 'click #register'
+    * @memberOf Template.login.events
+    * @params event
+    * @params template
+    */
     'click #register': function (event, template){
         Accounts.createUser({
             password: $('#password').val(),
@@ -74,6 +94,13 @@ Template.login.events({
 });
 
 Template.navProfil.events({
+    /**
+    * @summary Logout the user
+    * @method 'click #logout'
+    * @memberOf Template.navProfil.events
+    * @params event
+    * @params template
+    */
     'click #logout': function (event, template){
         Meteor.logout();
         Router.go('/');
