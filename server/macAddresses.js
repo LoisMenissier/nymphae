@@ -3,7 +3,6 @@ Meteor.methods({
     * @summary Check the boolean firstTime of a record in the collection Devices
     * @method checkFirstTime
     * @memberOf Meteor.methods
-    * @instance
     * @param {String} The Mac Address we want to validate
     * @returns {Boolean}
     */
@@ -22,7 +21,6 @@ Meteor.methods({
     * @summary Update the mac address of a device of a user.
     * @method updateMacAddress
     * @memberOf Meteor.methods
-    * @instance
     * @param {String} The old mac address
     * @param {String} The new mac address we want to set
     */

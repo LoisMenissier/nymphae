@@ -3,7 +3,6 @@ Meteor.methods({
     * @summary Add a user to the meteor database
     * @method addUser
     * @memberOf Meteor.methods
-    * @instance
     * @param {String} The mail address of the user
     * @param {String} The password of the user
     * @param {String} The mac address currently associated to the user
@@ -25,7 +24,6 @@ Meteor.methods({
     * @summary Delete a user from email
     * @method removeUser
     * @memberOf Meteor.methods
-    * @instance
     * @param {String} The mail address of the user
     */
     removeUser: function (email) {
@@ -38,7 +36,6 @@ Meteor.methods({
     * @summary Modify a user by id
     * @method modifyUser
     * @memberOf Meteor.methods
-    * @instance
     * @param {String} The id of the user
     * @param {String} The email of the user
     * @param {String} The mac address currently associated to the user
@@ -51,7 +48,6 @@ Meteor.methods({
     * @summary Find a user by id
     * @method findOneUserById
     * @memberOf Meteor.methods
-    * @instance
     * @param {String} The id of the user
     * @returns {Mixed} Array of objects Users
     */
@@ -65,7 +61,6 @@ Meteor.methods({
     * @summary Get all users
     * @method getAllUsers
     * @memberOf Meteor.methods
-    * @instance
     * @returns {Mixed} Array of objects Users
     */
     getAllUsers: function (){
@@ -77,7 +72,6 @@ Meteor.methods({
     * @summary Get the modules of a user by user id
     * @method getAllModules
     * @memberOf Meteor.methods
-    * @instance
     * @param {String} The id of the user
     * @returns {Mixed} Array of objects Modules
     */
@@ -91,7 +85,6 @@ Meteor.methods({
     * @summary Get the plants by modules
     * @method getPlantPerModule
     * @memberOf Meteor.methods
-    * @instance
     * @param {String} The id of a module
     * @returns {String} The id of the plants associated to a module
     */
@@ -105,7 +98,6 @@ Meteor.methods({
     * @summary Get all infos by plant id
     * @method getInfosPerPlant
     * @memberOf Meteor.methods
-    * @instance
     * @param {String} The id of the plant
     * @returns {Mixed} Array of objects
     */
@@ -118,7 +110,6 @@ Meteor.methods({
     * @summary Find a user by id
     * @method getAllPlantsNames
     * @memberOf Meteor.methods
-    * @instance
     * @returns {Mixed} Array of objects
     */
     getAllPlantsNames: function(){
@@ -129,7 +120,6 @@ Meteor.methods({
     * @summary Check the presence of a plant in a module
     * @method checkIfIdPlantExist
     * @memberOf Meteor.methods
-    * @instance
     * @param {String} The id of the user
     * @param {String} The id of the module
     * @returns {Boolean}
