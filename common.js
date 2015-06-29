@@ -4,7 +4,11 @@ Plants = new Mongo.Collection('plants');
 Stats = new Mongo.Collection('stats');
 
 var Schemas = {};
-
+/**
+ * @summary Instance of the MongoDb Schema Devices. When we boot up a new device we add it mac address.
+ * @instancename Devices
+ * @class
+ */
 Schemas.Devices = new SimpleSchema({
     macAddress: {
         type: String,
@@ -16,7 +20,11 @@ Schemas.Devices = new SimpleSchema({
         label: "First Time"
     }
 });
-
+/**
+ * @summary Instance of the MongoDb Schema Modules. 
+ * @instancename Modules
+ * @class
+ */
 Schemas.Modules = new SimpleSchema({
     idDevice: {
         type: String,
@@ -28,7 +36,11 @@ Schemas.Modules = new SimpleSchema({
         optional: true
     }
 });
-
+/**
+ * @summary Instance of the MongoDb Schema Plants. This is all the datas we can have to monitore our plants.
+ * @instancename Plants
+ * @class
+ */
 Schemas.Plants = new SimpleSchema({
     name: {
         type: String,
@@ -96,7 +108,11 @@ Schemas.Plants = new SimpleSchema({
         optional: true
     },
 });
-
+/**
+ * @summary Instance of the MongoDb Schema Stats. TO keep traces of the datas transmitted by the modules.
+ * @instancename Stats
+ * @class
+ */
 Schemas.Stats = new SimpleSchema({
     idModule: {
         type: String,
@@ -123,14 +139,49 @@ Schemas.Stats = new SimpleSchema({
     },
 });
 
-
+/**
+ * @summary This is creating a Devices Object from a Schema Object. This is needed to create objects endpointables for Restivus API.
+ * @class
+ */
 Devices.attachSchema(Schemas.Devices);
+/**
+ * @summary This is creating a Devices Object from a Schema Object. This is needed to create objects endpointables for Restivus API.
+ * @class
+ */
 Modules.attachSchema(Schemas.Modules);
+/**
+ * @summary This is creating a Devices Object from a Schema Object. This is needed to create objects endpointables for Restivus API.
+ * @class
+ */
 Plants.attachSchema(Schemas.Plants);
+/**
+ * @summary This is creating a Devices Object from a Schema Object. This is needed to create objects endpointables for Restivus API.
+ * @class
+ */
 Stats.attachSchema(Schemas.Stats);
 
+/**
+ * @summary This is linking a Devices Object Schema to Restivus to generate the API with it.
+ * @class
+ */
 Restivus.addCollection(Devices);
+/**
+ * @summary This is linking a Modules Object Schema to Restivus to generate the API with it.
+ * @class
+ */
 Restivus.addCollection(Modules);
+/**
+ * @summary This is linking a Plants Object Schema to Restivus to generate the API with it.
+ * @class
+ */
 Restivus.addCollection(Plants);
+/**
+ * @summary This is linking a Stats Object Schema to Restivus to generate the API with it.
+ * @class
+ */
 Restivus.addCollection(Stats);
+/**
+ * @summary This is linking a Meteor.users Object Schema to Restivus to generate the API with it.
+ * @class
+ */
 Restivus.addCollection(Meteor.users);
